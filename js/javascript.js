@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /*Typing effect*/
 
 var typed = new Typed(".typing", {
-    strings: ["","Tester QA", "Editor", "Diseñador web"],
+    strings: ["Full stack developer jr","Tester QA", "Editor", "Diseñador web"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
