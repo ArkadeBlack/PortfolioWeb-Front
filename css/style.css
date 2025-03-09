@@ -613,7 +613,7 @@ box-shadow: 0 0 20px rgb(48, 46, 77, 0.15);
 
 @media (max-width: 767px){
     
-    .theme-switcher,
+    .theme-switcher, .theme-toggler,
     .about .about-content .skills, 
     .about .about-content .personal-info,
     .service .service-item,
