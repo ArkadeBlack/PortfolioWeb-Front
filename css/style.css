@@ -627,6 +627,17 @@ box-shadow: 0 0 20px rgb(48, 46, 77, 0.15);
 
 }
 
+@media (max-width: 767px) {
+    .about .about-content .personal-info .info-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about .about-content .personal-info .info-item p {
+        font-size: 16px; /* Ajustar el tamaño de fuente para pantallas más pequeñas */
+    }
+}
+
 /*Modo nocturno*/
 
 body.dark-mode {
@@ -692,4 +703,30 @@ body.dark-mode {
 
 .theme-switcher input[type="checkbox"]:checked + label::after {
     transform: translateX(20px);
+}
+
+@media (max-width: 767px) {
+    .theme-switcher {
+        top: 10px;
+        right: 10px;
+    }
+
+    .theme-switcher label {
+        font-size: 20px;
+    }
+
+    .theme-switcher label::before {
+        width: 30px;
+        height: 15px;
+    }
+
+    .theme-switcher label::after {
+        width: 10px;
+        height: 12px;
+        left: 1.5px;
+    }
+
+    .theme-switcher input[type="checkbox"]:checked + label::after {
+        transform: translateX(15px);
+    }
 }
