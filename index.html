@@ -13,6 +13,19 @@
 </head>
 
 <body>
+    <div class="switchers">
+        <div class="theme-switcher">
+            <input type="checkbox" id="theme-toggle">
+            <label for="theme-toggle"><i class="fa fa-moon"></i></label>
+        </div>
+        <div class="language-switcher">
+            <input type="checkbox" id="language-toggle">
+            <label for="language-toggle">
+                <span class="en">EN</span>
+                <span class="es">ES</span>
+            </label>
+        </div>
+    </div>
     <!-- Contenedor principal -->
     <div class="main-container"></div>
     <!-- Aside -->
@@ -24,15 +37,11 @@
             <span></span>
         </div>
         <ul class="nav">
-            <li><a href="#home"><i id="nav-home" class="fa fa-home"></i> Inicio</a></li>
-            <li><a href="#about"><i id="nav-about" class="fa fa-user"></i> Sobre mí</a></li>
-            <li><a href="#portfolio"><i id="nav-portfolio" class="fa fa-briefcase"></i> Portfolio</a></li>
-            <li><a href="#contact"><i id="nav-contact" class="fa fa-comments"></i> Mi Contacto</a></li>
+            <li><a href="#home" data-key="nav_home"><i id="nav-home" class="fa fa-home"></i> Inicio</a></li>
+            <li><a href="#about" data-key="nav_about"><i id="nav-about" class="fa fa-user"></i> Sobre mí</a></li>
+            <li><a href="#portfolio" data-key="nav_portfolio"><i id="nav-portfolio" class="fa fa-briefcase"></i> Portfolio</a></li>
+            <li><a href="#contact" data-key="nav_contact"><i id="nav-contact" class="fa fa-comments"></i> Mi Contacto</a></li>
         </ul>
-        <div class="theme-switcher">
-            <input type="checkbox" id="theme-toggle">
-            <label for="theme-toggle"><i class="fa fa-moon"></i></label>
-        </div>
     </div>
     <!-- Home -->
     <div class="main-content">
@@ -40,11 +49,11 @@
             <div class="container">
                 <div class="row">
                     <div class="home-info padd-15">
-                        <h3 class="hello">Hola, Mi nombre es <span class="name">Lautaro Filomeno</span></h3>
-                        <h3 class="my-profession">Soy <span class="typing"> </span></h3>
-                        <p>Mi pasión por este mundo del codigo me ha llevado a desarrollar un portafolio web que refleja
+                        <h3 class="hello" data-key="home_greeting">Hola, Mi nombre es <span class="name">Lautaro Filomeno</span></h3>
+                        <h3 class="my-profession" data-key="home_profession">Soy <span class="typing"> </span></h3>
+                        <p data-key="home_bio">Mi pasión por este mundo del codigo me ha llevado a desarrollar un portafolio web que refleja
                             mi trabajo y mis logros hasta la fecha...</p>
-                        <a href="#contact" class="btn hire-me">Contactáme!</a>
+                        <a href="#contact" class="btn hire-me" data-key="home_contact_btn">Contactáme!</a>
                     </div>
                     <div class="home-img padd-15">
                         <img src="/assets/Lautaro.png" alt="">
@@ -57,15 +66,15 @@
             <div class="container">
                 <div class="row">
                     <div class="section-title padd-15">
-                        <h2>Sobre mí</h2>
+                        <h2 data-key="about_title">Sobre mí</h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="about-content padd-15">
                         <div class="row">
                             <div class="about-text padd-15">
-                                <h3>Mi nombre es Lautaro Filomeno Muñoz y soy <span>Web Developer Junior</span></h3>
-                                <p>Mi objetivo es transformar ideas en experiencias visuales y funcionales que no solo
+                                <h3 data-key="about_intro">Mi nombre es Lautaro Filomeno Muñoz y soy <span>Web Developer Junior</span></h3>
+                                <p data-key="about_bio">Mi objetivo es transformar ideas en experiencias visuales y funcionales que no solo
                                     resuelvan problemas, sino que también cuenten una historia única.
                                     <br>
                                     Me encanta el proceso de aprender continuamente, explorar nuevas tendencias y
@@ -79,10 +88,10 @@
                             <div class="personal-info padd-15">
                                 <div class="row">
                                     <div class="info-item padd-15">
-                                        <p>Cumpleaños:<span> 16 Noviembre</span></p>
+                                        <p data-key="about_birthday">Cumpleaños:<span> 16 Noviembre</span></p>
                                     </div>
                                     <div class="info-item padd-15">
-                                        <p>Edad:<span> 24</span></p>
+                                        <p data-key="about_age">Edad:<span> 24</span></p>
                                     </div>
                                     <div class="info-item padd-15">
                                         <p>GitHub:<span> @Arkade16</span></p>
@@ -91,16 +100,17 @@
                                         <p>Email:<span> lautaroinformatic@gmail.com</span></p>
                                     </div>
                                     <div class="info-item padd-15">
-                                        <p>Telefono:<span> 381-3557298</span></p>
+                                        <p data-key="about_phone">Telefono:<span> 381-3557298</span></p>
                                     </div>
                                     <div class="info-item padd-15">
-                                        <p>Ubicación:<span> Tucumán, Argentina</span></p>
+                                        <p data-key="about_location">Ubicación:<span> Tucumán, Argentina</span></p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="buttons padd-15">
-                                        <a href="/assets/Filomeno Lautaro.pdf" class="btn" download="CV_Lautaro_Filomeno">Descargar CV</a>
-                                        <a href="#contact" class="btn hire-me">Contactáme!</a>
+                                        <a href="/assets/Filomeno Lautaro (Julio-Español).pdf" class="btn" download="CV_Lautaro_Filomeno_ES">Descargar CV (ES)</a>
+                                        <a href="/assets/Filomeno Lautaro (Julio-Ingles).pdf" class="btn" download="CV_Lautaro_Filomeno_EN">Download CV (EN)</a>
+                                        <a href="#contact" class="btn hire-me" data-key="about_contact_btn">Contactáme!</a>
                                     </div>
                                 </div>
                             </div>
@@ -160,12 +170,12 @@
             <div class="container">
                 <div class="row">
                     <div class="section-title padd-15">
-                        <h2>Portfolio</h2>
+                        <h2 data-key="portfolio_title">Portfolio</h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="portfolio-heading padd-15">
-                        <h2>Mis ultimos proyectos:</h2>
+                        <h2 data-key="portfolio_subtitle">Mis ultimos proyectos:</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -323,55 +333,55 @@
             <div class="container">
                 <div class="row">
                     <div class="section-title padd-15">
-                        <h2>Mi contacto</h2>
+                        <h2 data-key="contact_title">Mi contacto</h2>
                     </div>
                 </div>
-                <h3 class="contact-title">Para sus consultas!</h3>
+                <h3 class="contact-title" data-key="contact_subtitle1">Para sus consultas!</h3>
                 <div class="row">
                     <div class="contact-info-item padd-15">
                         <div class="icon"><i class="fa fa-phone"></i></div>
-                        <h4>Contacto por telefono</h4>
+                        <h4 data-key="contact_phone_title">Contacto por telefono</h4>
                         <p>381 3557298</p>
                     </div>
                     <div class="contact-info-item padd-15">
                         <div class="icon"><i class="fa fa-cat"></i></div>
-                        <h4>Contacto por GitHub</h4>
+                        <h4 data-key="contact_github_title">Contacto por GitHub</h4>
                         <p>ArkadeBlack</p>
                     </div>
                     <div class="contact-info-item padd-15">
                         <div class="icon"><i class="fa fa-envelope"></i></div>
-                        <h4>Contacto por Email</h4>
-                        <p>lautarofm16@gmail.com</p>
+                        <h4 data-key="contact_email_title">Contacto por Email</h4>
+                        <p>anarchyarkade@gmail.com</p>
                     </div>
                     <div class="contact-info-item padd-15">
-                        <div class="icon"><i class="fa fa-globe-europe"></i></div>
-                        <h4>Localidad</h4>
-                        <p>Tucuman - Argentina</p>
+                        <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
+                        <h4 data-key="contact_linkedin_title">Contacto por LinkedIn</h4>
+                        <p>www.linkedin.com/in/lautaro-fm16</p>
                     </div>
                 </div>
-                <h3 class="contact-title padd-15">Enviame un Email desde aqui!</h3>
+                <h3 class="contact-title padd-15" data-key="contact_subtitle2">Enviame un Email desde aqui!</h3>
                 <div class="row">
                     <div class="contact-form padd-15">
                         <div class="row">
                             <div class="form-item col-6 padd-15">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Nombre">
+                                    <input type="text" class="form-control" placeholder="Nombre" data-key="contact_form_name">
                                 </div>
                             </div>
                             <div class="form-item col-6 padd-15">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email">
+                                    <input type="email" class="form-control" placeholder="Email" data-key="contact_form_email">
                                 </div>
                             </div>
                             <div class="form-item col-12 padd-15">
                                 <div class="form-group">
-                                    <textarea name="" class="form-control" placeholder="Envia tu mensaje"></textarea>
+                                    <textarea name="" class="form-control" placeholder="Envia tu mensaje" data-key="contact_form_message"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-item col-12 padd-15">
-                                <button type="submit" class="btn">Enviar Mensaje</button>
+                                <button type="submit" class="btn" data-key="contact_form_send_btn">Enviar Mensaje</button>
                             </div>
 
                         </div>
@@ -382,6 +392,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
             integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="/js/translations.js"></script>
         <script src="/js/javascript.js"></script>
 </body>
 

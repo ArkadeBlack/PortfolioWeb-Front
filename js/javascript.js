@@ -2,6 +2,41 @@ document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.nav a');
     const sections = document.querySelectorAll('section');
     const themeToggle = document.getElementById('theme-toggle');
+    const languageToggle = document.getElementById('language-toggle');
+    const translatableElements = document.querySelectorAll('[data-key]');
+
+    let currentLanguage = localStorage.getItem('language') || 'es';
+    let typed;
+
+    function setLanguage(lang) {
+        translatableElements.forEach(element => {
+            const key = element.getAttribute('data-key');
+            if (translations[lang] && translations[lang][key]) {
+                element.innerHTML = translations[lang][key];
+            }
+        });
+        localStorage.setItem('language', lang);
+        currentLanguage = lang;
+        updateTypedStrings();
+    }
+
+    function updateTypedStrings() {
+        if (typed) {
+            typed.destroy();
+        }
+        const strings = currentLanguage === 'es' 
+            ? ["Full stack developer jr","Tester QA", "Editor", "Diseñador web"]
+            : ["Junior Full Stack Developer", "QA Tester", "Editor", "Web Designer"];
+        
+        document.querySelector(".typing").innerHTML = '';
+
+        typed = new Typed(".typing", {
+            strings: strings,
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true
+        });
+    }
 
     function changeActiveLink() {
         let currentSection = sections[0];
@@ -44,13 +79,13 @@ document.addEventListener('DOMContentLoaded', function () {
     themeToggle.addEventListener('change', function () {
         document.body.classList.toggle('dark-mode', this.checked);
     });
-});
 
-/*Typing effect*/
+    // Language switcher
+    languageToggle.addEventListener('change', function () {
+        setLanguage(this.checked ? 'en' : 'es');
+    });
 
-var typed = new Typed(".typing", {
-    strings: ["Full stack developer jr","Tester QA", "Editor", "Diseñador web"],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true
+    // Set initial language
+    languageToggle.checked = currentLanguage === 'en';
+    setLanguage(currentLanguage);
 });

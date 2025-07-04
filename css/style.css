@@ -559,9 +559,14 @@ h3.my-profession{
     display: inline-block;
 }
 
-.contact .contact-info-item .icon .fa{
+.contact .contact-info-item .icon .fa,
+.contact .contact-info-item .icon .fa-brands {
     font-size: 30px;
     color: var(--skin-color)
+}
+
+.contact .contact-info-item .icon .fa-linkedin{
+    color: #0077b5;
 }
 
 .contact .contact-info-item h4{
@@ -692,12 +697,17 @@ body.dark-mode {
     --skin-color: #ff6347; /* Puedes cambiar este color si lo deseas */
 }
 
-.theme-switcher {
+.switchers {
     position: fixed;
     top: 20px;
     right: 20px;
-    text-align: center;
     z-index: 1000;
+    display: flex;
+    gap: 20px;
+}
+
+.theme-switcher {
+    text-align: center;
 }
 
 .theme-switcher input[type="checkbox"] {
@@ -746,6 +756,52 @@ body.dark-mode {
 
 .theme-switcher input[type="checkbox"]:checked + label::after {
     transform: translateX(20px);
+}
+
+/* Language Switcher */
+.language-switcher {
+    text-align: center;
+}
+
+.language-switcher input[type="checkbox"] {
+    display: none;
+}
+
+.language-switcher label {
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--text-black-900);
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    background: var(--bg-black-50);
+    border-radius: 20px;
+    padding: 5px;
+    position: relative;
+    width: 70px;
+    height: 30px;
+}
+
+.language-switcher .en, .language-switcher .es {
+    flex: 1;
+    text-align: center;
+    z-index: 1;
+}
+
+.language-switcher label::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 22px;
+    background: var(--skin-color);
+    border-radius: 20px;
+    left: 4px;
+    top: 4px;
+    transition: transform 0.3s ease;
+}
+
+.language-switcher input[type="checkbox"]:checked + label::before {
+    transform: translateX(31px);
 }
 
 @media (max-width: 767px) {
