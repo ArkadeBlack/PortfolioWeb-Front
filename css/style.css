@@ -458,12 +458,13 @@ h3.my-profession{
     font-weight: 500;
     color: var(--text-black-900);
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .portfolio .portfolio-item{
-    flex: 0 0 33%;
-    max-width: 60%;
-    margin-bottom: 20px;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
 }
 
 .portfolio .portfolio-item-inner{
@@ -490,8 +491,50 @@ h3.my-profession{
 }
 
 .portfolio .portfolio-item img:hover {
-    transform: scale(0.95);
-    box-shadow: none;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio .portfolio-item-inner .portfolio-info {
+    padding: 15px;
+    background-color: var(--bg-black-100);
+}
+
+.portfolio .portfolio-item-inner .portfolio-info .portfolio-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    margin-bottom: 10px;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info .technologies {
+    display: flex;
+    gap: 10px;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info .technologies i {
+    font-size: 24px;
+    color: var(--skin-color);
+}
+
+.portfolio .portfolio-item-inner .portfolio-info .technologies .fa-html5 {
+    color: #e34f26;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info .technologies .fa-css3-alt {
+    color: #1572b6;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info .technologies .fa-js-square {
+    color: #f7df1e;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info .technologies .fa-react {
+    color: #61dafb;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info .technologies .fa-cogs {
+    color: #8d8d8d;
 }
 
 /* CONTACT */
