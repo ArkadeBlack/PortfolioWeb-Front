@@ -537,6 +537,25 @@ h3.my-profession{
     color: #8d8d8d;
 }
 
+.portfolio .portfolio-item-inner .portfolio-info .technologies .fa-node-js {
+    color: #2bac47;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info .technologies .fa-database {
+    color: #a84817;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info .technologies .fa-angular {
+    color: #9c1010;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info .technologies .fa-bootstrap {
+    color: #9fdd8c;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info .technologies .fa-bolt {
+    color: #d8d540;
+}
 /* CONTACT */
 
 
